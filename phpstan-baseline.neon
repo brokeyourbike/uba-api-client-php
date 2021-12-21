@@ -1,0 +1,247 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:ATM is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:BANK_TELLER is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:INTERNET_BANKING is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:MERCANT_WEB is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:MOBILE_PHONE is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:OTHER is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:POS_TERMINAL is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ChannelTypeEnum\\:\\:THIRD_PARTY is unused\\.$#"
+			count: 1
+			path: src/Enums/ChannelTypeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:ACCOUNT_CLOSED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:BANK_CONFIG_ERROR is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:BLOCK_NOT_FOUND is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:CHEQUES_ARE_IN_DIFFERENT_BOOKS is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:CHEQUE_BOOK_ALREADY_ISSUED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:CHEQUE_NOT_ISSUED_TO_ACCOUNT is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:CHEQUE_STOPPED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:COUNTRIES_MISSMATCH is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:CUT_OVER_IN_PROGRESS is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:DATA_RETRIEVAL_ERROR is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:DD_ALREADY_PAID is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:DUPLICATE_STAN is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:FORMAT_ERROR is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INSUFFICIENT_FUNDS is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_ACCOUNT_NUMBER is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_CHEQUE_STATUS is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_CREDENTIALS is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_CURRENCY is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_DATA_TYPE is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_RATE_CURRENCY_COMBINATION is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_REQUEST_JSON is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_SCHEME_TYPE is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_TRANSACTION_CODE is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:INVALID_TRANSACTION_ID is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:MISSING_COUNTRY_CODE is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:NETWORK_MESSAGE_WAS_ACCEPTED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:NOT_ALL_CHEQUES_COULD_BE_STOPPED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:SECURITY_VIOLATION_LEVEL_0 is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:SECURITY_VIOLATION_LEVEL_1 is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:SERVICE_ERROR is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:SERVICE_TIMEOUT is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:SOL_CONFIG_ERROR is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:SUCCESS is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:TRANSACTION_NOT_PERMITTED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:TRANSFER_LIMIT_EXCEEDED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:UNKNOWN_ERROR is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:UNSUPPORTED_REQUEST_FUNCTION is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\ErrorCodeEnum\\:\\:WITHDRAWAL_AMOUNT_LIMIT_EXCEEDED is unused\\.$#"
+			count: 1
+			path: src/Enums/ErrorCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\StatusCodeEnum\\:\\:FAILURE is unused\\.$#"
+			count: 1
+			path: src/Enums/StatusCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\StatusCodeEnum\\:\\:SUCCESS is unused\\.$#"
+			count: 1
+			path: src/Enums/StatusCodeEnum.php
+
+		-
+			message: "#^Constant BrokeYourBike\\\\UnitedBank\\\\Enums\\\\StatusCodeEnum\\:\\:UNKNOWN is unused\\.$#"
+			count: 1
+			path: src/Enums/StatusCodeEnum.php
+
