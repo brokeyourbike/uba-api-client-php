@@ -9,25 +9,22 @@
 namespace BrokeYourBike\UnitedBank\Enums;
 
 /**
- * @method static StatusCodeEnum SUCCESS()
- * @method static StatusCodeEnum FAILURE()
- * @method static StatusCodeEnum UNKNOWN()
- * @psalm-immutable
+ * @author Ivan Stasiuk <brokeyourbike@gmail.com>
  */
-final class StatusCodeEnum extends \MyCLabs\Enum\Enum
+enum StatusCodeEnum: string
 {
     /**
      * Transaction transfer successful
      */
-    private const SUCCESS = 'Success';
+    case SUCCESS = 'Success';
 
     /**
      * Transaction failed
      */
-    private const FAILURE = 'Failure';
+    case FAILURE = 'Failure';
 
     /**
      * Transaction state should be confirmed
      */
-    private const UNKNOWN = 'Unknown';
+    case UNKNOWN = 'Unknown';
 }

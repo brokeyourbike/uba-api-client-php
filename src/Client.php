@@ -45,7 +45,7 @@ class Client implements HttpClientInterface
             $this->setSourceModel($transaction);
         }
 
-        $response = $this->performRequest(HttpMethodEnum::POST(), 'accountinformation/v1.0', [
+        $response = $this->performRequest(HttpMethodEnum::POST, 'accountinformation/v1.0', [
             'Security' => [
                 'login' => $this->config->getUsername(),
                 'Password' => $this->config->getPassword(),
@@ -67,7 +67,7 @@ class Client implements HttpClientInterface
             $this->setSourceModel($transaction);
         }
 
-        $response = $this->performRequest(HttpMethodEnum::POST(), 'Status/v1.0', [
+        $response = $this->performRequest(HttpMethodEnum::POST, 'Status/v1.0', [
             'Security' => [
                 'login' => $this->config->getUsername(),
                 'Password' => $this->config->getPassword(),
@@ -87,7 +87,7 @@ class Client implements HttpClientInterface
             $this->setSourceModel($transaction);
         }
 
-        $response = $this->performRequest(HttpMethodEnum::POST(), 'credit/v1.0', [
+        $response = $this->performRequest(HttpMethodEnum::POST, 'credit/v1.0', [
             'Security' => [
                 'login' => $this->config->getUsername(),
                 'Password' => $this->config->getPassword(),
@@ -137,6 +137,6 @@ class Client implements HttpClientInterface
         }
 
         $uri = (string) $this->resolveUriFor($this->config->getUrl(), $uri);
-        return $this->httpClient->request((string) $method, $uri, $options);
+        return $this->httpClient->request($method->value, $uri, $options);
     }
 }
