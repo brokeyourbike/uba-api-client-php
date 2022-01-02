@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.1](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.0...v0.2.1) (2022-01-02)
+
+
+### Bug Fixes
+
+* remove baseline ([87925ec](https://www.github.com/brokeyourbike/uba-api-client-php/commit/87925ecb66401490e38b2ed18794e4ae58d8da38))
+
 ## [0.2.0](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.1.0...v0.2.0) (2021-12-25)
 
 
