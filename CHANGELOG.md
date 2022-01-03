@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.3](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.2...v0.2.3) (2022-01-03)
+
+
+### Bug Fixes
+
+* update `brokeyourbike/data-transfer-object` ([a171367](https://www.github.com/brokeyourbike/uba-api-client-php/commit/a171367e5615f8c63151452f5b02e951ea8556bd))
+
 ### [0.2.2](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.1...v0.2.2) (2022-01-03)
 
 
