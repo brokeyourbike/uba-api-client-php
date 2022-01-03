@@ -9,12 +9,12 @@
 namespace BrokeYourBike\UnitedBank\Tests;
 
 use PHPUnit\Framework\TestCase;
+use BrokeYourBike\UnitedBank\Interfaces\ConfigInterface;
+use BrokeYourBike\UnitedBank\Client;
 use BrokeYourBike\ResolveUri\ResolveUriTrait;
 use BrokeYourBike\HttpClient\HttpClientTrait;
 use BrokeYourBike\HttpClient\HttpClientInterface;
 use BrokeYourBike\HasSourceModel\HasSourceModelTrait;
-use BrokeYourBike\UnitedBank\Interfaces\ConfigInterface;
-use BrokeYourBike\UnitedBank\Client;
 
 /**
  * @author Ivan Stasiuk <brokeyourbike@gmail.com>
@@ -30,12 +30,10 @@ class ClientTest extends TestCase
         /** @var \GuzzleHttp\ClientInterface */
         $mockedHttpClient = $this->getMockBuilder(\GuzzleHttp\ClientInterface::class)->getMock();
 
-        /** @var \Psr\SimpleCache\CacheInterface */
-        $mockedCache = $this->getMockBuilder(\Psr\SimpleCache\CacheInterface::class)->getMock();
-
-        $api = new Client($mockedConfig, $mockedHttpClient, $mockedCache);
+        $api = new Client($mockedConfig, $mockedHttpClient);
 
         $this->assertInstanceOf(HttpClientInterface::class, $api);
+        $this->assertSame($mockedConfig, $api->getConfig());
     }
 
     /** @test */

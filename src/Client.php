@@ -39,6 +39,11 @@ class Client implements HttpClientInterface
         $this->httpClient = $httpClient;
     }
 
+    public function getConfig(): ConfigInterface
+    {
+        return $this->config;
+    }
+
     public function fetchAccountInformationForTransaction(TransactionInterface $transaction): AccountInformationResponse
     {
         if ($transaction instanceof SourceModelInterface) {
