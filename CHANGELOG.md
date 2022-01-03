@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.2](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.1...v0.2.2) (2022-01-03)
+
+
+### Bug Fixes
+
+* add `getConfig` ([3ba8fcc](https://www.github.com/brokeyourbike/uba-api-client-php/commit/3ba8fccc02ecaf5d5c14b2cfa920f687dde0d84b))
+
 ### [0.2.1](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.0...v0.2.1) (2022-01-02)
 
 
