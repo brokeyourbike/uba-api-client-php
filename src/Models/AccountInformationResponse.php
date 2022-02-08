@@ -16,17 +16,23 @@ use BrokeYourBike\DataTransferObject\JsonResponse;
  */
 class AccountInformationResponse extends JsonResponse
 {
+    #[MapFrom('ErrorCode')]
+    public ?string $errorCode;
+
+    #[MapFrom('ErrorDescription')]
+    public ?string $errorDescription;
+
     #[MapFrom('UBATransactionId')]
-    public string $requestId;
+    public ?string $requestId;
 
     #[MapFrom('accountInformation.responseCode')]
-    public string $responseCode;
+    public ?string $responseCode;
 
     #[MapFrom('accountInformation.responseMessage')]
-    public string $responseMessage;
+    public ?string $responseMessage;
 
     #[MapFrom('accountInformation.balanceCurrency')]
-    public string $balanceCurrency;
+    public ?string $balanceCurrency;
 
     #[MapFrom('accountInformation.accountName')]
     public ?string $accountName;

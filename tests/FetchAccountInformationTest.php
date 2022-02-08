@@ -101,4 +101,72 @@ class FetchAccountInformationTest extends TestCase
 
         $this->assertInstanceOf(AccountInformationResponse::class, $requestResult);
     }
+
+    /** @test */
+    public function it_can_handle_error_response()
+    {
+        $transaction = $this->getMockBuilder(TransactionInterface::class)->getMock();
+        $transaction->method('getSourceSwiftCode')->willReturn($this->sourceSwiftCode);
+        $transaction->method('getDestinationAccountNumber')->willReturn($this->destinationAccountNumber);
+        $transaction->method('getDestinationSwiftCode')->willReturn($this->destinationSwiftCode);
+        $transaction->method('getRoutingTag')->willReturn($this->routingTag);
+
+        /** @var TransactionInterface $transaction */
+        $this->assertInstanceOf(TransactionInterface::class, $transaction);
+
+        $mockedConfig = $this->getMockBuilder(ConfigInterface::class)->getMock();
+        $mockedConfig->method('getUrl')->willReturn('https://api.example/');
+        $mockedConfig->method('getToken')->willReturn($this->authToken);
+        $mockedConfig->method('getClientId')->willReturn($this->clientId);
+        $mockedConfig->method('getClientName')->willReturn($this->clientName);
+        $mockedConfig->method('getUsername')->willReturn($this->username);
+        $mockedConfig->method('getPassword')->willReturn($this->password);
+
+        $mockedResponse = $this->getMockBuilder(ResponseInterface::class)->getMock();
+        $mockedResponse->method('getStatusCode')->willReturn(200);
+        $mockedResponse->method('getBody')
+            ->willReturn('{
+                "ErrorCode": "999",
+                "ErrorDescription": "Invalid Credentials"
+            }');
+
+        /** @var \Mockery\MockInterface $mockedClient */
+        $mockedClient = \Mockery::mock(\GuzzleHttp\Client::class);
+        $mockedClient->shouldReceive('request')->withArgs([
+            'POST',
+            'https://api.example/accountinformation/v1.0',
+            [
+                \GuzzleHttp\RequestOptions::HTTP_ERRORS => false,
+                \GuzzleHttp\RequestOptions::HEADERS => [
+                    'Accept' => 'application/json',
+                    'Authorization' => "Bearer {$this->authToken}",
+                ],
+                \GuzzleHttp\RequestOptions::JSON => [
+                    'Security' => [
+                        'login' => $this->username,
+                        'Password' => $this->password,
+                    ],
+                    'sourceUri' => "bic={$this->sourceSwiftCode}",
+                    'destinationUri' => "ban:{$this->destinationAccountNumber};bic={$this->destinationSwiftCode}",
+                    'routingTag' => $this->routingTag,
+                    'vendorSpecificFields' => [
+                        'ClientId' => $this->clientId,
+                        'ClientName' => $this->clientName,
+                    ],
+                ],
+            ],
+        ])->once()->andReturn($mockedResponse);
+
+        /**
+         * @var ConfigInterface $mockedConfig
+         * @var \GuzzleHttp\Client $mockedClient
+         * */
+        $api = new Client($mockedConfig, $mockedClient);
+
+        $requestResult = $api->fetchAccountInformationForTransaction($transaction);
+
+        $this->assertInstanceOf(AccountInformationResponse::class, $requestResult);
+        $this->assertSame('999', $requestResult->errorCode);
+        $this->assertSame('Invalid Credentials', $requestResult->errorDescription);
+    }
 }

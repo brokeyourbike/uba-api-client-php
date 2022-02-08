@@ -94,13 +94,13 @@ class FetchTransactionStatusTest extends TestCase
     }
 
     /** @test */
-    public function it_will_pass_source_model_as_option(): void
+    public function it_can_handle_error_response()
     {
-        $transaction = $this->getMockBuilder(SourceTransactionFixture::class)->getMock();
+        $transaction = $this->getMockBuilder(TransactionInterface::class)->getMock();
         $transaction->method('getDestinationId')->willReturn($this->destinationId);
 
-        /** @var SourceTransactionFixture $transaction */
-        $this->assertInstanceOf(SourceTransactionFixture::class, $transaction);
+        /** @var TransactionInterface $transaction */
+        $this->assertInstanceOf(TransactionInterface::class, $transaction);
 
         $mockedConfig = $this->getMockBuilder(ConfigInterface::class)->getMock();
         $mockedConfig->method('getUrl')->willReturn('https://api.example/');
@@ -114,13 +114,8 @@ class FetchTransactionStatusTest extends TestCase
         $mockedResponse->method('getStatusCode')->willReturn(200);
         $mockedResponse->method('getBody')
             ->willReturn('{
-                "status": {
-                    "transactionId": "'. $this->destinationId .'",
-                    "hsTransactionId": "234123412341",
-                    "state": "Success",
-                    "stateLabel": "SUCCESS",
-                    "statusCode": "000"
-                }
+                "ErrorCode": "999",
+                "ErrorDescription": "Invalid Credentials"
             }');
 
         /** @var \Mockery\MockInterface $mockedClient */
@@ -145,7 +140,6 @@ class FetchTransactionStatusTest extends TestCase
                         'ClientName' => $this->clientName,
                     ],
                 ],
-                \BrokeYourBike\HasSourceModel\Enums\RequestOptions::SOURCE_MODEL => $transaction,
             ],
         ])->once()->andReturn($mockedResponse);
 
@@ -158,5 +152,7 @@ class FetchTransactionStatusTest extends TestCase
         $requestResult = $api->fetchTransactionStatus($transaction);
 
         $this->assertInstanceOf(TransactionStatusResponse::class, $requestResult);
+        $this->assertSame('999', $requestResult->errorCode);
+        $this->assertSame('Invalid Credentials', $requestResult->errorDescription);
     }
 }

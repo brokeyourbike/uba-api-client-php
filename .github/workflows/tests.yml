@@ -32,11 +32,13 @@ jobs:
 
     - name: Upload coverage to codecov
       uses: codecov/codecov-action@v2
+      continue-on-error: true
       with:
         files: ./coverage.xml
 
     - name: Upload coverage to codeclimate
       uses: paambaati/codeclimate-action@v3.0.0
+      continue-on-error: true
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TOKEN }}
       with:

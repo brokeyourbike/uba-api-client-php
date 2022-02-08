@@ -16,8 +16,14 @@ use BrokeYourBike\DataTransferObject\JsonResponse;
  */
 class TransactionStatusResponse extends JsonResponse
 {
+    #[MapFrom('ErrorCode')]
+    public ?string $errorCode;
+
+    #[MapFrom('ErrorDescription')]
+    public ?string $errorDescription;
+
     #[MapFrom('status.state')]
-    public string $state;
+    public ?string $state;
 
     #[MapFrom('status.stateLabel')]
     public ?string $stateLabel;

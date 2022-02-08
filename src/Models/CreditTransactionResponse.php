@@ -16,17 +16,23 @@ use BrokeYourBike\DataTransferObject\JsonResponse;
  */
 class CreditTransactionResponse extends JsonResponse
 {
+    #[MapFrom('ErrorCode')]
+    public ?string $errorCode;
+
+    #[MapFrom('ErrorDescription')]
+    public ?string $errorDescription;
+
     #[MapFrom('UBATransactionId')]
-    public string $requestId;
+    public ?string $requestId;
 
     #[MapFrom('transactionId')]
-    public string $transactionId;
+    public ?string $transactionId;
 
     #[MapFrom('hsTransactionId')]
-    public string $reference;
+    public ?string $reference;
 
     #[MapFrom('provisionalResponse.state')]
-    public string $state;
+    public ?string $state;
 
     #[MapFrom('provisionalResponse.label')]
     public ?string $stateLabel;
