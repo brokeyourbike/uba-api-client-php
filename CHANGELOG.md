@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.3...v0.3.0) (2022-02-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* it can handle error response
+
+### Bug Fixes
+
+* it can handle error response ([8cb7289](https://www.github.com/brokeyourbike/uba-api-client-php/commit/8cb728910a003af50ae79f8d5e3815e0c2f13cbd))
+
 ### [0.2.3](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.2...v0.2.3) (2022-01-03)
 
 
