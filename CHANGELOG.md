@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.3.1](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.3.0...v0.3.1) (2022-02-21)
+
+
+### Bug Fixes
+
+* add one more enum case ([55f151c](https://www.github.com/brokeyourbike/uba-api-client-php/commit/55f151c3302daeed4fa5b36752624bcce94d6429))
+
 ## [0.3.0](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.2.3...v0.3.0) (2022-02-08)
 
 
