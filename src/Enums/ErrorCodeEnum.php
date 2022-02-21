@@ -205,4 +205,9 @@ enum ErrorCodeEnum: string
      * Invalid credentials.
      */
     case INVALID_CREDENTIALS = '999';
+
+    /**
+     * System malfunction.
+     */
+    case SYSTEM_MALFUNCTION = '909';
 }
