@@ -1,5 +1,17 @@
 # Changelog
 
+### [0.3.2](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.3.1...v0.3.2) (2023-05-14)
+
+
+### Bug Fixes
+
+* allow to use composer bin ([d399507](https://www.github.com/brokeyourbike/uba-api-client-php/commit/d399507570564837f73e69f74c3f93dbc89a02b6))
+
+
+### Miscellaneous Chores
+
+* badges ([abd8919](https://www.github.com/brokeyourbike/uba-api-client-php/commit/abd8919555ce841c96dd5c2f231fad53a0c990d9))
+
 ### [0.3.1](https://www.github.com/brokeyourbike/uba-api-client-php/compare/v0.3.0...v0.3.1) (2022-02-21)
 
 
