@@ -8,7 +8,6 @@ on:
 
 jobs:
   phpstan:
-    name: PHPStan
     runs-on: ubuntu-latest
     timeout-minutes: 5
     strategy:
@@ -16,22 +15,13 @@ jobs:
         php-version: [8.1]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - uses: shivammathur/setup-php@v2
         with:
           php-version: "${{ matrix.php-version }}"
           coverage: none
-          extensions: mbstring
-          tools: composer
 
-      - name: Download dependencies
-        run: composer update --no-interaction --no-progress
-
-      - name: Download PHPStan
-        run: composer bin phpstan require phpstan/phpstan
-
-      - name: Execute PHPStan
-        run: vendor/bin/phpstan analyze --no-progress
+      - run: composer update --no-interaction --no-progress
+      - run: composer bin phpstan require phpstan/phpstan
+      - run: vendor/bin/phpstan analyze --no-progress
